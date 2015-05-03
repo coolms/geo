@@ -27,7 +27,7 @@ class HierarchyHelperFactory implements FactoryInterface
         $services = $helpers->getServiceLocator();
 
         /* @var $mapper \CmsCommon\Persistence\HierarchyMapperInterface */
-        $mapper = $services->get('MapperManager')->get('CmsGeo\\Entity\\TerritoryHierarchy');
+        $mapper = $services->get('MapperManager')->get('CmsGeoORM\\Entity\\TerritoryHierarchy');
 
         return new Hierarchy($mapper);
     }
