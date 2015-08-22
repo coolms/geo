@@ -11,9 +11,19 @@
 namespace CmsGeo;
 
 return [
+    'cmspermissions' => [
+        'acl' => [
+            'guards' => [
+                'CmsAcl\Guard\Route' => [
+                    ['route' => 'cms-admin/geo',    'roles' => ['admin']],
+                ],
+            ],
+        ],
+    ],
     'controllers' => [
         'aliases' => [
             'CmsGeo\Controller\Admin' => 'CmsGeo\Mvc\Controller\AdminController',
+            'CmsGeo\Controller\TerritoryHierarchy' => 'CmsGeo\Mapping\TerritoryHierarchyInterface',
         ],
         'invokables' => [
             'CmsGeo\Mvc\Controller\AdminController' => 'CmsGeo\Mvc\Controller\AdminController',
