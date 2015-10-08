@@ -21,10 +21,12 @@ class HierarchyHelperFactory implements FactoryInterface
 {
     /**
      * {@inheritDoc}
+     *
+     * @return Hierarchy
      */
-    public function createService(ServiceLocatorInterface $helpers)
+    public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $services = $helpers->getServiceLocator();
+        $services = $serviceLocator->getServiceLocator();
 
         /* @var $mapper \CmsCommon\Persistence\HierarchyMapperInterface */
         $mapper = $services->get('MapperManager')->get('CmsGeoORM\\Entity\\TerritoryHierarchy');
