@@ -12,7 +12,8 @@ namespace CmsGeo\Factory\View\Helper;
 
 use Zend\ServiceManager\FactoryInterface,
     Zend\ServiceManager\ServiceLocatorInterface,
-    CmsCommon\View\Helper\Hierarchy;
+    CmsCommon\View\Helper\Hierarchy,
+    CmsGeo\Mapping\TerritoryHierarchyInterface;
 
 /**
  * View helper for rendering territory hierarchy.
@@ -29,7 +30,7 @@ class HierarchyHelperFactory implements FactoryInterface
         $services = $serviceLocator->getServiceLocator();
 
         /* @var $mapper \CmsCommon\Persistence\HierarchyMapperInterface */
-        $mapper = $services->get('MapperManager')->get('CmsGeoORM\\Entity\\TerritoryHierarchy');
+        $mapper = $services->get('MapperManager')->get(TerritoryHierarchyInterface::class);
 
         return new Hierarchy($mapper);
     }
