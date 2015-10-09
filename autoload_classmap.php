@@ -5,6 +5,7 @@ return array(
     'CmsGeo\Mapping\GroupInterface'                     => __DIR__ . '/src/Mapping/GroupInterface.php',
     'CmsGeo\Mapping\Subdivision\LocalityInterface'      => __DIR__ . '/src/Mapping/Subdivision/LocalityInterface.php',
     'CmsGeo\Mapping\SubdivisionInterface'               => __DIR__ . '/src/Mapping/SubdivisionInterface.php',
+    'CmsGeo\Mapping\TerritoryHierarchyInterface'        => __DIR__ . '/src/Mapping/TerritoryHierarchyInterface.php',
     'CmsGeo\Module'                                     => __DIR__ . '/src/Module.php',
     'CmsGeo\Mvc\Controller\AdminController'             => __DIR__ . '/src/Mvc/Controller/AdminController.php',
     'CmsGeoTest\Framework\TestCase'                     => __DIR__ . '/tests/Framework/TestCase.php',
